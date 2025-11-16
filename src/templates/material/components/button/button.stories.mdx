@@ -1,0 +1,139 @@
+# Button
+
+Material Design button component with elevation-based states and ripple effects.
+
+## Overview
+
+The Button component is a fundamental interactive element that triggers actions when clicked. It follows Material Design 3 specifications with three main variants: contained, outlined, and text buttons.
+
+## Variants
+
+### Contained Buttons
+
+Contained buttons have high emphasis with elevation and a filled background.
+
+```tsx
+<Button variant="contained" color="primary">
+  Primary
+</Button>
+<Button variant="contained" color="secondary">
+  Secondary
+</Button>
+<Button variant="contained" color="error">
+  Error
+</Button>
+<Button variant="contained" color="success">
+  Success
+</Button>
+```
+
+### Outlined Buttons
+
+Outlined buttons have medium emphasis with a border and no fill.
+
+```tsx
+<Button variant="outlined" color="primary">
+  Primary
+</Button>
+<Button variant="outlined" color="secondary">
+  Secondary
+</Button>
+```
+
+### Text Buttons
+
+Text buttons have low emphasis with no border or fill.
+
+```tsx
+<Button variant="text" color="primary">
+  Primary
+</Button>
+<Button variant="text" color="secondary">
+  Secondary
+</Button>
+```
+
+## Sizes
+
+Buttons come in three sizes: small, medium (default), and large.
+
+```tsx
+<Button size="small">Small</Button>
+<Button size="medium">Medium</Button>
+<Button size="large">Large</Button>
+```
+
+## Full Width
+
+Use the `fullWidth` prop to make the button take up the full width of its container.
+
+```tsx
+<Button fullWidth>Full Width Button</Button>
+```
+
+## Disabled State
+
+Disabled buttons cannot be interacted with and have reduced opacity.
+
+```tsx
+<Button disabled>Disabled</Button>
+<Button variant="outlined" disabled>Disabled</Button>
+```
+
+## Usage
+
+```tsx
+import { Button } from '@/templates/material/components/button'
+
+export default function MyComponent() {
+  const handleClick = () => {
+    console.log('Button clicked!')
+  }
+
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={handleClick}
+    >
+      Click Me
+    </Button>
+  )
+}
+```
+
+## Accessibility
+
+- **Keyboard Support**: Buttons can be activated with Space or Enter keys
+- **Focus Indicator**: Visible focus outline appears when navigating with keyboard
+- **ARIA Roles**: Proper `button` role is automatically applied
+- **Screen Readers**: Button labels are announced to screen reader users
+
+### Best Practices
+
+1. Use clear, action-oriented button labels (e.g., "Submit Form" not "Click Here")
+2. Ensure sufficient color contrast (WCAG AA compliant)
+3. Provide visual feedback on hover and active states
+4. Disable buttons during loading operations to prevent duplicate submissions
+
+## Design Tokens Used
+
+- `color.primary`: #1976d2
+- `color.secondary`: #f50057
+- `spacing.2`: 8px (vertical padding)
+- `spacing.4`: 16px (horizontal padding)
+- `borderRadius.medium`: 4px
+- `shadow.elevation-2`: Material elevation level 2
+- `transition.duration.normal`: 250ms
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | 'contained' \| 'outlined' \| 'text' | 'contained' | Visual style variant |
+| color | 'primary' \| 'secondary' \| 'error' \| 'success' | 'primary' | Color scheme |
+| size | 'small' \| 'medium' \| 'large' | 'medium' | Button size |
+| fullWidth | boolean | false | Full width button |
+| disabled | boolean | false | Disabled state |
+| onClick | function | - | Click event handler |
+| children | ReactNode | - | Button content (required) |

@@ -1,0 +1,31 @@
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-text-secondary);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: var(--transition-all);
+}
+
+.checkbox:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.checkbox:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body1);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}

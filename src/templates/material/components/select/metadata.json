@@ -1,0 +1,30 @@
+{
+  "name": "select",
+  "displayName": "Select",
+  "category": "primitive",
+  "description": "Material Design select dropdown",
+  "props": [
+    {
+      "name": "label",
+      "type": "string",
+      "required": false,
+      "description": "Label for the select"
+    },
+    {
+      "name": "options",
+      "type": "SelectOption[]",
+      "required": true,
+      "description": "Array of options"
+    }
+  ],
+  "variants": [],
+  "tokens": [],
+  "accessibility": {
+    "wcagLevel": "AA",
+    "keyboardSupport": ["Arrow keys", "Enter"],
+    "ariaRoles": ["listbox"],
+    "screenReaderGuidance": "Select dropdowns announce options"
+  },
+  "examples": [],
+  "mdxPath": "./select.stories.mdx"
+}
