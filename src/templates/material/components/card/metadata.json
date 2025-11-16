@@ -1,0 +1,44 @@
+{
+  "name": "card",
+  "displayName": "Card",
+  "category": "composite",
+  "description": "Material Design card with elevation",
+  "props": [
+    {
+      "name": "elevation",
+      "type": "0 | 1 | 2 | 3 | 4",
+      "required": false,
+      "default": 1,
+      "description": "Elevation level",
+      "options": [0, 1, 2, 3, 4]
+    }
+  ],
+  "variants": [
+    {
+      "name": "Elevation 1",
+      "props": { "elevation": 1 },
+      "preview": "<Card elevation={1}>Content</Card>"
+    }
+  ],
+  "tokens": [
+    {
+      "path": "shadow.elevation-1",
+      "cssVar": "--shadow-elevation-1",
+      "value": "Material elevation 1"
+    }
+  ],
+  "accessibility": {
+    "wcagLevel": "AA",
+    "keyboardSupport": [],
+    "ariaRoles": [],
+    "screenReaderGuidance": "Cards should have meaningful content structure"
+  },
+  "examples": [
+    {
+      "title": "Basic",
+      "description": "Simple card",
+      "code": "<Card><h3>Title</h3><p>Content</p></Card>"
+    }
+  ],
+  "mdxPath": "./card.stories.mdx"
+}

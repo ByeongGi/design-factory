@@ -1,0 +1,86 @@
+{
+  "name": "input",
+  "displayName": "Input",
+  "category": "primitive",
+  "description": "Material Design text input with floating labels and helper text",
+  "props": [
+    {
+      "name": "label",
+      "type": "string",
+      "required": false,
+      "description": "Label text for the input"
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "required": false,
+      "description": "Helper text displayed below the input"
+    },
+    {
+      "name": "error",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Error state"
+    },
+    {
+      "name": "errorMessage",
+      "type": "string",
+      "required": false,
+      "description": "Error message (automatically sets error to true)"
+    },
+    {
+      "name": "fullWidth",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Full width input"
+    },
+    {
+      "name": "variant",
+      "type": "'outlined' | 'filled'",
+      "required": false,
+      "default": "outlined",
+      "description": "Visual variant",
+      "options": ["outlined", "filled"]
+    }
+  ],
+  "variants": [
+    {
+      "name": "Outlined",
+      "props": { "variant": "outlined", "label": "Email" },
+      "preview": "<Input variant=\"outlined\" label=\"Email\" />"
+    },
+    {
+      "name": "Filled",
+      "props": { "variant": "filled", "label": "Email" },
+      "preview": "<Input variant=\"filled\" label=\"Email\" />"
+    }
+  ],
+  "tokens": [
+    {
+      "path": "color.primary",
+      "cssVar": "--color-primary",
+      "value": "#1976d2"
+    },
+    {
+      "path": "spacing.3",
+      "cssVar": "--spacing-3",
+      "value": "12px"
+    }
+  ],
+  "accessibility": {
+    "wcagLevel": "AA",
+    "keyboardSupport": ["Tab", "Arrow keys for text navigation"],
+    "ariaRoles": ["textbox"],
+    "screenReaderGuidance": "Labels should be descriptive and associated with inputs"
+  },
+  "examples": [
+    {
+      "title": "Basic",
+      "description": "Simple input with label",
+      "code": "<Input label=\"Email\" type=\"email\" />"
+    }
+  ],
+  "mdxPath": "./input.stories.mdx"
+}

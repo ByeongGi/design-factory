@@ -104,16 +104,16 @@ Each template (`templates/[name]/`) contains:
 ### Phase 1: Foundation (Week 1) - 6-8 hours
 - [x] Initialize git repository
 - [x] Create GitHub repository
-- [ ] Create Next.js 15 project
-- [ ] Install dependencies
-- [ ] Configure project files
-- [ ] Set up directory structure
+- [x] Create Next.js 15 project
+- [x] Install dependencies
+- [x] Configure project files
+- [x] Set up directory structure
 
 ### Phase 2: First Template (Week 2) - 12-15 hours
-- [ ] Create Material Design template structure
-- [ ] Implement 5 primitive components (Button, Input, Card, Select, Checkbox)
-- [ ] Define design tokens (DTCG format)
-- [ ] Create component metadata
+- [x] Create Material Design template structure
+- [x] Implement 5 primitive components (Button, Input, Card, Select, Checkbox)
+- [x] Define design tokens (DTCG format)
+- [x] Create component metadata
 
 ### Phase 3: Showcase UI (Week 3) - 10-12 hours
 - [ ] Create homepage template gallery

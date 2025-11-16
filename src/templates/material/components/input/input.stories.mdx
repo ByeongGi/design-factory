@@ -1,0 +1,39 @@
+# Input
+
+Material Design text input component with floating labels and helper text.
+
+## Usage
+
+```tsx
+<Input label="Email" type="email" helperText="Enter your email address" />
+```
+
+## Variants
+
+### Outlined (Default)
+```tsx
+<Input variant="outlined" label="Name" />
+```
+
+### Filled
+```tsx
+<Input variant="filled" label="Name" />
+```
+
+## States
+
+### Error
+```tsx
+<Input label="Email" error errorMessage="Invalid email address" />
+```
+
+### Disabled
+```tsx
+<Input label="Email" disabled />
+```
+
+## Accessibility
+
+- Keyboard navigable with Tab
+- Labels are properly associated with inputs
+- Error messages are announced to screen readers

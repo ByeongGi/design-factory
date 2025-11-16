@@ -1,0 +1,41 @@
+{
+  "id": "material",
+  "name": "Material Design",
+  "version": "1.0.0",
+  "description": "Google Material Design 3 inspired component library with elevation-based design system",
+  "author": "Design Factory",
+  "license": "MIT",
+  "primaryColor": "#1976d2",
+  "thumbnail": "/templates/material/thumbnail.png",
+  "preview": {
+    "light": "/templates/material/preview-light.png",
+    "dark": "/templates/material/preview-dark.png"
+  },
+  "category": "enterprise",
+  "tags": ["google", "material", "material-design", "elevation", "mobile-first"],
+  "framework": "react",
+  "styling": "css-modules",
+  "tokensFormat": "dtcg",
+  "paths": {
+    "tokens": "./tokens/tokens.json",
+    "components": "./components",
+    "theme": "./theme/theme.css",
+    "readme": "./README.md"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
+    "next": "^15.0.0"
+  },
+  "stats": {
+    "components": 5,
+    "tokens": 45,
+    "wcagLevel": "AA",
+    "browserSupport": ["Chrome 90+", "Firefox 88+", "Safari 14+", "Edge 90+"]
+  },
+  "exportable": true,
+  "standalone": true
+}

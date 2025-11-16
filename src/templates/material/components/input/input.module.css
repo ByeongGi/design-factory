@@ -1,0 +1,109 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.inputWrapper.fullWidth {
+  width: 100%;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-1);
+  transition: color var(--transition-duration-fast);
+}
+
+.input {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body1);
+  color: var(--color-text-primary);
+  padding: var(--spacing-3) var(--spacing-4);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  background-color: transparent;
+  transition: var(--transition-all);
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* Outlined variant */
+.outlined {
+  border: 1px solid var(--color-divider);
+}
+
+.outlined:hover:not(.disabled) {
+  border-color: var(--color-text-primary);
+}
+
+.outlined:focus-within {
+  border-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.outlined.error {
+  border-color: var(--color-error);
+}
+
+/* Filled variant */
+.filled {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--color-divider);
+  border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+}
+
+.filled:hover:not(.disabled) {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+.filled:focus-within {
+  border-bottom-width: 2px;
+  border-bottom-color: var(--color-primary);
+}
+
+.filled.error {
+  border-bottom-color: var(--color-error);
+}
+
+/* Focus state */
+.inputContainer:focus-within .label {
+  color: var(--color-primary);
+}
+
+.error .label,
+.inputContainer.error:focus-within .label {
+  color: var(--color-error);
+}
+
+/* Helper text */
+.helperText {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-1);
+}
+
+.errorText {
+  color: var(--color-error);
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.disabled .input {
+  cursor: not-allowed;
+}

@@ -1,0 +1,117 @@
+/**
+ * Material Design Theme - CSS Variables
+ * Generated from design tokens
+ */
+
+[data-theme="material"] {
+  /* Colors */
+  --color-primary: #1976d2;
+  --color-primary-dark: #1565c0;
+  --color-primary-light: #42a5f5;
+  --color-secondary: #f50057;
+  --color-surface: #ffffff;
+  --color-background: #fafafa;
+  --color-error: #d32f2f;
+  --color-success: #388e3c;
+  --color-warning: #f57c00;
+
+  /* Text Colors */
+  --color-text-primary: rgba(0, 0, 0, 0.87);
+  --color-text-secondary: rgba(0, 0, 0, 0.60);
+  --color-text-disabled: rgba(0, 0, 0, 0.38);
+  --color-text-hint: rgba(0, 0, 0, 0.38);
+
+  /* Divider */
+  --color-divider: rgba(0, 0, 0, 0.12);
+
+  /* On-color text (text displayed on colored backgrounds) */
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-surface: rgba(0, 0, 0, 0.87);
+  --color-on-error: #ffffff;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+
+  /* Typography */
+  --font-family-base: "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-family-monospace: "Roboto Mono", monospace;
+
+  --font-size-h1: 96px;
+  --font-size-h2: 60px;
+  --font-size-h3: 48px;
+  --font-size-h4: 34px;
+  --font-size-h5: 24px;
+  --font-size-h6: 20px;
+  --font-size-body1: 16px;
+  --font-size-body2: 14px;
+  --font-size-button: 14px;
+  --font-size-caption: 12px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Border Radius */
+  --border-radius-none: 0px;
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  --border-radius-full: 9999px;
+
+  /* Default border radius */
+  --border-radius: var(--border-radius-medium);
+
+  /* Shadows (Material Elevation) */
+  --shadow-none: none;
+  --shadow-elevation-1: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                         0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                         0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-2: 0px 4px 8px 0px rgba(0, 0, 0, 0.14),
+                         0px 1px 18px 0px rgba(0, 0, 0, 0.12),
+                         0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+  --shadow-elevation-3: 0px 8px 16px 0px rgba(0, 0, 0, 0.12),
+                         0px 3px 14px 0px rgba(0, 0, 0, 0.12),
+                         0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+  --shadow-elevation-4: 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+                         0px 6px 30px 5px rgba(0, 0, 0, 0.12),
+                         0px 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-duration-fast: 150ms;
+  --transition-duration-normal: 250ms;
+  --transition-duration-slow: 400ms;
+
+  --transition-easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --transition-easing-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --transition-easing-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+
+  /* Common transitions */
+  --transition-all: all var(--transition-duration-normal) var(--transition-easing-standard);
+  --transition-transform: transform var(--transition-duration-normal) var(--transition-easing-standard);
+  --transition-opacity: opacity var(--transition-duration-fast) var(--transition-easing-standard);
+}
+
+/* Dark mode support (optional) */
+[data-theme="material"][data-mode="dark"] {
+  --color-surface: #121212;
+  --color-background: #000000;
+  --color-text-primary: rgba(255, 255, 255, 0.87);
+  --color-text-secondary: rgba(255, 255, 255, 0.60);
+  --color-text-disabled: rgba(255, 255, 255, 0.38);
+  --color-text-hint: rgba(255, 255, 255, 0.38);
+  --color-divider: rgba(255, 255, 255, 0.12);
+  --color-on-surface: rgba(255, 255, 255, 0.87);
+}

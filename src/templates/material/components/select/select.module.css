@@ -1,0 +1,37 @@
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.selectWrapper.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+}
+
+.select {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body1);
+  color: var(--color-text-primary);
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-surface);
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+.select:hover {
+  border-color: var(--color-text-primary);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  border-width: 2px;
+}

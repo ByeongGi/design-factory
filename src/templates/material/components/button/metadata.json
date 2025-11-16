@@ -1,0 +1,140 @@
+{
+  "name": "button",
+  "displayName": "Button",
+  "category": "primitive",
+  "description": "Material Design button component with elevation-based states and multiple variants",
+  "props": [
+    {
+      "name": "variant",
+      "type": "'contained' | 'outlined' | 'text'",
+      "required": false,
+      "default": "contained",
+      "description": "Visual style variant of the button",
+      "options": ["contained", "outlined", "text"]
+    },
+    {
+      "name": "color",
+      "type": "'primary' | 'secondary' | 'error' | 'success'",
+      "required": false,
+      "default": "primary",
+      "description": "Color scheme of the button",
+      "options": ["primary", "secondary", "error", "success"]
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "Size of the button",
+      "options": ["small", "medium", "large"]
+    },
+    {
+      "name": "fullWidth",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "If true, the button will take up the full width of its container"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "If true, the button will be disabled"
+    },
+    {
+      "name": "onClick",
+      "type": "(event: React.MouseEvent<HTMLButtonElement>) => void",
+      "required": false,
+      "description": "Callback fired when the button is clicked"
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "The content of the button"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Contained Primary",
+      "props": {
+        "variant": "contained",
+        "color": "primary"
+      },
+      "preview": "<Button variant=\"contained\" color=\"primary\">Contained</Button>"
+    },
+    {
+      "name": "Outlined Primary",
+      "props": {
+        "variant": "outlined",
+        "color": "primary"
+      },
+      "preview": "<Button variant=\"outlined\" color=\"primary\">Outlined</Button>"
+    },
+    {
+      "name": "Text Primary",
+      "props": {
+        "variant": "text",
+        "color": "primary"
+      },
+      "preview": "<Button variant=\"text\" color=\"primary\">Text</Button>"
+    }
+  ],
+  "tokens": [
+    {
+      "path": "color.primary",
+      "cssVar": "--color-primary",
+      "value": "#1976d2"
+    },
+    {
+      "path": "color.secondary",
+      "cssVar": "--color-secondary",
+      "value": "#f50057"
+    },
+    {
+      "path": "spacing.2",
+      "cssVar": "--spacing-2",
+      "value": "8px"
+    },
+    {
+      "path": "spacing.4",
+      "cssVar": "--spacing-4",
+      "value": "16px"
+    },
+    {
+      "path": "borderRadius.medium",
+      "cssVar": "--border-radius-medium",
+      "value": "4px"
+    },
+    {
+      "path": "shadow.elevation-2",
+      "cssVar": "--shadow-elevation-2",
+      "value": "Material elevation level 2"
+    }
+  ],
+  "accessibility": {
+    "wcagLevel": "AA",
+    "keyboardSupport": ["Space", "Enter"],
+    "ariaRoles": ["button"],
+    "screenReaderGuidance": "Buttons should have clear, descriptive labels"
+  },
+  "examples": [
+    {
+      "title": "Basic Usage",
+      "description": "Simple button with default props",
+      "code": "<Button>Click Me</Button>"
+    },
+    {
+      "title": "Variants",
+      "description": "Different button variants",
+      "code": "<>\n  <Button variant=\"contained\">Contained</Button>\n  <Button variant=\"outlined\">Outlined</Button>\n  <Button variant=\"text\">Text</Button>\n</>"
+    },
+    {
+      "title": "Colors",
+      "description": "Different color schemes",
+      "code": "<>\n  <Button color=\"primary\">Primary</Button>\n  <Button color=\"secondary\">Secondary</Button>\n  <Button color=\"error\">Error</Button>\n  <Button color=\"success\">Success</Button>\n</>"
+    }
+  ],
+  "mdxPath": "./button.stories.mdx"
+}
