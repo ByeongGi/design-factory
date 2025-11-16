@@ -24,6 +24,12 @@ export function Navigation() {
             >
               Compare
             </Link>
+            <Link
+              href="/tokens"
+              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+            >
+              Tokens
+            </Link>
           </div>
         </div>
       </div>
