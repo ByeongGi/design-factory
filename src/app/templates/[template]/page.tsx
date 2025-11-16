@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTemplate, getTemplates, getComponents } from '@/lib/templates/loader'
+import { DownloadButton } from '@/components/showcase/download-button'
 
 interface TemplatePageProps {
   params: Promise<{ template: string }>
@@ -69,7 +70,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
             </div>
 
             {/* Stats */}
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-6 text-sm mb-6">
               <div>
                 <span className="text-gray-600">Components:</span>{' '}
                 <span className="font-semibold">{template.stats.components}</span>
@@ -87,6 +88,9 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
                 <span className="font-semibold">{template.version}</span>
               </div>
             </div>
+
+            {/* Download Button */}
+            <DownloadButton templateId={templateId} templateName={template.name} />
           </header>
 
           {/* Components Section */}
