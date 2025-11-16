@@ -1,0 +1,58 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 7px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-base);
+  white-space: nowrap;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.default {
+  background-color: var(--color-background-light);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.primary {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+  color: var(--color-primary);
+}
+
+.success {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+  color: var(--color-success);
+}
+
+.warning {
+  background-color: #fffbe6;
+  border-color: #ffe58f;
+  color: var(--color-warning);
+}
+
+.error {
+  background-color: #fff2f0;
+  border-color: #ffccc7;
+  color: var(--color-error);
+}
+
+.closeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  font-size: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity var(--transition-duration);
+}
+
+.closeIcon:hover {
+  opacity: 1;
+}

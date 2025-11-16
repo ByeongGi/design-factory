@@ -1,0 +1,110 @@
+{
+  "name": "button",
+  "displayName": "Button",
+  "description": "Ant Design button component with multiple types and states",
+  "category": "primitive",
+  "props": [
+    {
+      "name": "type",
+      "type": "'primary' | 'default' | 'dashed' | 'text' | 'link'",
+      "defaultValue": "'default'",
+      "description": "Button type variant"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'middle' | 'large'",
+      "defaultValue": "'middle'",
+      "description": "Button size"
+    },
+    {
+      "name": "danger",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Set danger state"
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Set loading state"
+    },
+    {
+      "name": "block",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Make button full width"
+    },
+    {
+      "name": "shape",
+      "type": "'default' | 'circle' | 'round'",
+      "defaultValue": "'default'",
+      "description": "Button shape"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Disable the button"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Types",
+      "options": ["primary", "default", "dashed", "text", "link"]
+    },
+    {
+      "name": "Sizes",
+      "options": ["small", "middle", "large"]
+    },
+    {
+      "name": "Shapes",
+      "options": ["default", "circle", "round"]
+    },
+    {
+      "name": "States",
+      "options": ["default", "danger", "loading", "disabled"]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color-primary",
+      "usage": "Primary button background and default button text on hover"
+    },
+    {
+      "name": "color-border",
+      "usage": "Default button border"
+    },
+    {
+      "name": "spacing-xs",
+      "usage": "Gap between icon and text"
+    },
+    {
+      "name": "border-radius-base",
+      "usage": "Button border radius"
+    },
+    {
+      "name": "transition-duration",
+      "usage": "Transition timing"
+    }
+  ],
+  "accessibility": {
+    "keyboardSupport": true,
+    "ariaSupport": true,
+    "screenReaderSupport": true,
+    "notes": "Supports keyboard navigation, focus states, and ARIA attributes"
+  },
+  "examples": [
+    {
+      "title": "Primary Button",
+      "code": "<Button type=\"primary\">Primary</Button>"
+    },
+    {
+      "title": "Danger Button",
+      "code": "<Button type=\"primary\" danger>Delete</Button>"
+    },
+    {
+      "title": "Loading Button",
+      "code": "<Button type=\"primary\" loading>Loading...</Button>"
+    }
+  ]
+}

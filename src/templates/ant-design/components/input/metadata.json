@@ -1,0 +1,75 @@
+{
+  "name": "input",
+  "displayName": "Input",
+  "description": "Ant Design input field with prefix/suffix support",
+  "category": "primitive",
+  "props": [
+    {
+      "name": "size",
+      "type": "'small' | 'middle' | 'large'",
+      "defaultValue": "'middle'",
+      "description": "Input size"
+    },
+    {
+      "name": "status",
+      "type": "'error' | 'warning'",
+      "description": "Input validation status"
+    },
+    {
+      "name": "prefix",
+      "type": "ReactNode",
+      "description": "Prefix content like icon"
+    },
+    {
+      "name": "suffix",
+      "type": "ReactNode",
+      "description": "Suffix content like icon"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Disable the input"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Sizes",
+      "options": ["small", "middle", "large"]
+    },
+    {
+      "name": "Status",
+      "options": ["default", "error", "warning"]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color-border",
+      "usage": "Input border"
+    },
+    {
+      "name": "color-primary",
+      "usage": "Focus border color"
+    },
+    {
+      "name": "border-radius-base",
+      "usage": "Input border radius"
+    }
+  ],
+  "accessibility": {
+    "keyboardSupport": true,
+    "ariaSupport": true,
+    "screenReaderSupport": true,
+    "notes": "Supports standard input accessibility features"
+  },
+  "examples": [
+    {
+      "title": "Basic Input",
+      "code": "<Input placeholder=\"Enter text\" />"
+    },
+    {
+      "title": "Error State",
+      "code": "<Input status=\"error\" placeholder=\"Error\" />"
+    }
+  ]
+}

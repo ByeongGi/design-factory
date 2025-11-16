@@ -1,0 +1,69 @@
+{
+  "name": "tag",
+  "displayName": "Tag",
+  "description": "Ant Design tag for categorizing and labeling",
+  "category": "primitive",
+  "props": [
+    {
+      "name": "color",
+      "type": "'default' | 'primary' | 'success' | 'warning' | 'error'",
+      "defaultValue": "'default'",
+      "description": "Tag color variant"
+    },
+    {
+      "name": "closable",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Whether tag can be closed"
+    },
+    {
+      "name": "onClose",
+      "type": "(e: MouseEvent) => void",
+      "description": "Callback when close is clicked"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Colors",
+      "options": ["default", "primary", "success", "warning", "error"]
+    },
+    {
+      "name": "States",
+      "options": ["default", "closable"]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color-primary",
+      "usage": "Primary tag text color"
+    },
+    {
+      "name": "color-success",
+      "usage": "Success tag text color"
+    },
+    {
+      "name": "color-warning",
+      "usage": "Warning tag text color"
+    },
+    {
+      "name": "color-error",
+      "usage": "Error tag text color"
+    }
+  ],
+  "accessibility": {
+    "keyboardSupport": false,
+    "ariaSupport": true,
+    "screenReaderSupport": true,
+    "notes": "Can add keyboard support for closable tags"
+  },
+  "examples": [
+    {
+      "title": "Basic Tags",
+      "code": "<Tag>Default</Tag>\n<Tag color=\"primary\">Primary</Tag>"
+    },
+    {
+      "title": "Closable Tag",
+      "code": "<Tag closable onClose={() => console.log('closed')}>Closable</Tag>"
+    }
+  ]
+}

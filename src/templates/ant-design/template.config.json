@@ -1,0 +1,38 @@
+{
+  "id": "ant-design",
+  "name": "Ant Design",
+  "version": "1.0.0",
+  "description": "Enterprise-class UI design language and React components",
+  "author": "Design Factory",
+  "license": "MIT",
+  "framework": "react",
+  "styling": "CSS Modules",
+  "primaryColor": "#1890ff",
+  "paths": {
+    "tokens": "src/templates/ant-design/tokens/tokens.json",
+    "components": "src/templates/ant-design/components",
+    "theme": "src/templates/ant-design/theme/theme.css",
+    "readme": "src/templates/ant-design/README.md"
+  },
+  "stats": {
+    "components": 4,
+    "tokens": 42,
+    "wcagLevel": "AA",
+    "browserSupport": [
+      "Chrome (latest)",
+      "Firefox (latest)",
+      "Safari (latest)",
+      "Edge (latest)"
+    ]
+  },
+  "tags": [
+    "Enterprise",
+    "Professional",
+    "Comprehensive",
+    "TypeScript",
+    "React"
+  ],
+  "dependencies": {
+    "clsx": "^2.0.0"
+  }
+}
