@@ -116,11 +116,11 @@ Each template (`templates/[name]/`) contains:
 - [x] Create component metadata
 
 ### Phase 3: Showcase UI (Week 3) - 10-12 hours
-- [ ] Create homepage template gallery
-- [ ] Build template detail pages
-- [ ] Implement component documentation pages
-- [ ] Add MDX rendering
-- [ ] Code copy functionality
+- [x] Create homepage template gallery
+- [x] Build template detail pages
+- [x] Implement component documentation pages
+- [x] Add MDX rendering
+- [x] Code copy functionality
 
 ### Phase 4: Download & Export (Week 4) - 12-15 hours
 - [ ] Template ZIP generator
