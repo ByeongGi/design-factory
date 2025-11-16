@@ -1,0 +1,76 @@
+{
+  "name": "card",
+  "displayName": "Card",
+  "description": "Ant Design card container with header and body",
+  "category": "composite",
+  "props": [
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "description": "Card title"
+    },
+    {
+      "name": "extra",
+      "type": "ReactNode",
+      "description": "Extra content in header (top-right)"
+    },
+    {
+      "name": "bordered",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "Show card border"
+    },
+    {
+      "name": "hoverable",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "Lift card on hover"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'default'",
+      "defaultValue": "'default'",
+      "description": "Card size"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Sizes",
+      "options": ["small", "default"]
+    },
+    {
+      "name": "States",
+      "options": ["bordered", "borderless", "hoverable"]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color-border",
+      "usage": "Card border and header divider"
+    },
+    {
+      "name": "spacing-lg",
+      "usage": "Card body padding"
+    },
+    {
+      "name": "shadow-base",
+      "usage": "Hover shadow"
+    }
+  ],
+  "accessibility": {
+    "keyboardSupport": false,
+    "ariaSupport": true,
+    "screenReaderSupport": true,
+    "notes": "Can be made interactive with appropriate ARIA attributes"
+  },
+  "examples": [
+    {
+      "title": "Basic Card",
+      "code": "<Card title=\"Card Title\">Card content</Card>"
+    },
+    {
+      "title": "Hoverable Card",
+      "code": "<Card hoverable>Hover me</Card>"
+    }
+  ]
+}
