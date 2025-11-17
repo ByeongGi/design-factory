@@ -1,41 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300&family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Base spacing scale */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-4: 1rem;
-  --space-8: 2rem;
+  /* Editorial Color Palette */
+  --color-cream: #FDFDF8;
+  --color-cream-dark: #F5F5ED;
+  --color-emerald: #0F4C3A;
+  --color-emerald-light: #1A6B52;
+  --color-emerald-dark: #0A2F23;
+  --color-terracotta: #E67E3B;
+  --color-terracotta-light: #F29559;
+  --color-gold: #D4A574;
+  --color-sage: #8FA88E;
 
-  /* Typography */
-  --font-sans: system-ui, -apple-system, sans-serif;
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
+  /* Neutrals */
+  --color-text-primary: #0A2F23;
+  --color-text-secondary: #4A5F54;
+  --color-text-tertiary: #7A8A82;
+  --color-border: #D8DDD9;
+  --color-border-dark: #B8C4BD;
 
-  /* Default theme colors (will be overridden by design system themes) */
-  --color-primary: #1976d2;
-  --color-surface: #ffffff;
-  --color-on-primary: #ffffff;
-  --border-radius: 0.375rem;
-  --shadow-elevation-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Typography Scale */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Effects */
+  --shadow-subtle: 0 1px 3px rgba(10, 47, 35, 0.08);
+  --shadow-soft: 0 4px 12px rgba(10, 47, 35, 0.12);
+  --shadow-medium: 0 8px 24px rgba(10, 47, 35, 0.16);
+  --shadow-large: 0 16px 48px rgba(10, 47, 35, 0.2);
+
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+
+  /* Animations */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-surface: #1a1a1a;
+@layer base {
+  body {
+    @apply bg-[var(--color-cream)] text-[var(--color-text-primary)];
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--color-surface);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn var(--duration-slow) var(--ease-smooth) forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--duration-slow) var(--ease-smooth) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn var(--duration-slow) var(--ease-spring) forwards;
+  }
+
+  /* Stagger delays */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Glass effect */
+  .glass {
+    background: rgba(253, 253, 248, 0.7);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-terracotta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-terracotta);
+  color: var(--color-cream);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
